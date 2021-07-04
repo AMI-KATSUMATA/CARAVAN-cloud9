@@ -41,7 +41,7 @@
       </h3>
       <div class="blog-box-content">
         <p class="category">
-            <%= @blog.category>
+            <%= @blog.category %>
         </p>
         <p class="blog-date">
           <%= @blog.created_at %>
@@ -52,8 +52,9 @@
         <%= @blog.body %>
       </p>
       
-      <%= link_to "編集", edit/blog_path(@blog) %>
-      <a href="#">削除</a>
+      <%= link_to "編集", edit_blog_path(@blog) %>
+      <%= link_to "削除", blog_path(@blog), method: :delete %>
+      
       <div class="author-case">
         <div class="author-image"></div>
         <div class="author-box">
